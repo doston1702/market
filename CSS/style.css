@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+}
+.swiper {
+  width: 100%;
+  height: fit-content;
+  padding: 30px 0;
+}
+.swiper-wrapper {
+  padding-bottom: 20px;
+}
+.swiper-slide {
+  /* padding: 0 100px; */
+  display: flex;
+  justify-content: center;
+}
+.swiper-button-prev::after {
+  color: #ff8800;
+}
+.swiper-button-next::after {
+  color: #ff8800;
+}
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: #ff8800;
+}
+.item {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-img {
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  transition: 300ms;
+}
+.main-img:hover {
+  transform: scale(1.1);
+}
+.price-zone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+.d-price {
+  font-size: 18px;
+  font-weight: 600;
+}
+.price {
+  font-size: 14px;
+  font-weight: 500;
+  color: gray;
+  text-decoration: line-through;
+}
+.discount {
+  padding: 2px;
+  background-color: orangered;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+.star-zone {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.stars img {
+  width: 20px;
+  height: 20px;
+  transition: 200ms;
+  cursor: pointer;
+}
+.stars img:hover {
+  transform: scale(1.4);
+}
+.star-number {
+  font-size: 16px;
+  color: gray;
+}
+.context {
+  font-size: 15px;
+  max-width: 200px;
+}
+.btn {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #ffc400;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 300ms;
+}
+.btn:hover {
+  background-color: orangered;
+  transform: scale(0.9);
+  box-shadow: 0 0 10px orangered;
+  color: white;
+}
+@keyframes more {
+  0% {
+    position: fixed;
+    bottom: -100%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  80% {
+    position: fixed;
+    bottom: -100%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  100% {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+.show-more {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: lightgray;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 300ms;
+  z-index: 10;
+  animation: more 4s;
+}
+.show-more:hover {
+  background-color: gray;
+}
+
+/* Classes for js */
+.hide {
+  display: none;
+}
