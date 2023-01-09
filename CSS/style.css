@@ -161,3 +161,14 @@
 .hide {
   display: none;
 }
+@keyframes star {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.star-anim {
+  animation: star 1s;
+}

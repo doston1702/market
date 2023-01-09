@@ -143,6 +143,11 @@ let starRater = (rater1, rater2, rater3, rater4, rater5) => {
     rate3.src = "./Images/gray-star-icon.png";
     rate4.src = "./Images/gray-star-icon.png";
     rate5.src = "./Images/gray-star-icon.png";
+
+    rate1.classList.add('star-anim')
+    setTimeout(() => {
+      rate1.classList.remove('star-anim')
+    }, 1000);
   });
   rate2.addEventListener("click", function () {
     rate1.src = "./Images/star-icon.png";
@@ -150,6 +155,15 @@ let starRater = (rater1, rater2, rater3, rater4, rater5) => {
     rate3.src = "./Images/gray-star-icon.png";
     rate4.src = "./Images/gray-star-icon.png";
     rate5.src = "./Images/gray-star-icon.png";
+
+    rate1.classList.add('star-anim')
+    setTimeout(() => {
+      rate1.classList.remove('star-anim')
+    }, 1000);
+    rate2.classList.add('star-anim')
+    setTimeout(() => {
+      rate2.classList.remove('star-anim')
+    }, 1000);
   });
   rate3.addEventListener("click", function () {
     rate1.src = "./Images/star-icon.png";
@@ -157,6 +171,19 @@ let starRater = (rater1, rater2, rater3, rater4, rater5) => {
     rate3.src = "./Images/star-icon.png";
     rate4.src = "./Images/gray-star-icon.png";
     rate5.src = "./Images/gray-star-icon.png";
+
+    rate1.classList.add('star-anim')
+    setTimeout(() => {
+      rate1.classList.remove('star-anim')
+    }, 1000);
+    rate2.classList.add('star-anim')
+    setTimeout(() => {
+      rate2.classList.remove('star-anim')
+    }, 1000);
+    rate3.classList.add('star-anim')
+    setTimeout(() => {
+      rate3.classList.remove('star-anim')
+    }, 1000);
   });
   rate4.addEventListener("click", function () {
     rate1.src = "./Images/star-icon.png";
@@ -164,6 +191,23 @@ let starRater = (rater1, rater2, rater3, rater4, rater5) => {
     rate3.src = "./Images/star-icon.png";
     rate4.src = "./Images/star-icon.png";
     rate5.src = "./Images/gray-star-icon.png";
+
+    rate1.classList.add('star-anim')
+    setTimeout(() => {
+      rate1.classList.remove('star-anim')
+    }, 1000);
+    rate2.classList.add('star-anim')
+    setTimeout(() => {
+      rate2.classList.remove('star-anim')
+    }, 1000);
+    rate3.classList.add('star-anim')
+    setTimeout(() => {
+      rate3.classList.remove('star-anim')
+    }, 1000);
+    rate4.classList.add('star-anim')
+    setTimeout(() => {
+      rate4.classList.remove('star-anim')
+    }, 1000);
   });
   rate5.addEventListener("click", function () {
     rate1.src = "./Images/star-icon.png";
@@ -171,6 +215,27 @@ let starRater = (rater1, rater2, rater3, rater4, rater5) => {
     rate3.src = "./Images/star-icon.png";
     rate4.src = "./Images/star-icon.png";
     rate5.src = "./Images/star-icon.png";
+
+    rate1.classList.add('star-anim')
+    setTimeout(() => {
+      rate1.classList.remove('star-anim')
+    }, 1000);
+    rate2.classList.add('star-anim')
+    setTimeout(() => {
+      rate2.classList.remove('star-anim')
+    }, 1000);
+    rate3.classList.add('star-anim')
+    setTimeout(() => {
+      rate3.classList.remove('star-anim')
+    }, 1000);
+    rate4.classList.add('star-anim')
+    setTimeout(() => {
+      rate4.classList.remove('star-anim')
+    }, 1000);
+    rate5.classList.add('star-anim')
+    setTimeout(() => {
+      rate5.classList.remove('star-anim')
+    }, 1000);
   });
 };
 
