@@ -1,23 +1,4 @@
-// Swiper js
-// const swiper = new Swiper(".swiper", {
-//   loop: true,
-//   lazy: true,
-//   slidesPerView: 1,
-//   spaceBetween: 30,
-//   keyboard: {
-//     enabled: true,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
-
-// Yandex market function
+// Yandex market
 let things = [
   [
     ".swiper-wrapper",
@@ -148,6 +129,52 @@ let things = [
   },
 ];
 
+// Rating stars function
+let starRater = (rater1, rater2, rater3, rater4, rater5) => {
+  let rate1 = rater1;
+  let rate2 = rater2;
+  let rate3 = rater3;
+  let rate4 = rater4;
+  let rate5 = rater5;
+
+  rate1.addEventListener("click", function () {
+    rate1.src = "./Images/star-icon.png";
+    rate2.src = "./Images/gray-star-icon.png";
+    rate3.src = "./Images/gray-star-icon.png";
+    rate4.src = "./Images/gray-star-icon.png";
+    rate5.src = "./Images/gray-star-icon.png";
+  });
+  rate2.addEventListener("click", function () {
+    rate1.src = "./Images/star-icon.png";
+    rate2.src = "./Images/star-icon.png";
+    rate3.src = "./Images/gray-star-icon.png";
+    rate4.src = "./Images/gray-star-icon.png";
+    rate5.src = "./Images/gray-star-icon.png";
+  });
+  rate3.addEventListener("click", function () {
+    rate1.src = "./Images/star-icon.png";
+    rate2.src = "./Images/star-icon.png";
+    rate3.src = "./Images/star-icon.png";
+    rate4.src = "./Images/gray-star-icon.png";
+    rate5.src = "./Images/gray-star-icon.png";
+  });
+  rate4.addEventListener("click", function () {
+    rate1.src = "./Images/star-icon.png";
+    rate2.src = "./Images/star-icon.png";
+    rate3.src = "./Images/star-icon.png";
+    rate4.src = "./Images/star-icon.png";
+    rate5.src = "./Images/gray-star-icon.png";
+  });
+  rate5.addEventListener("click", function () {
+    rate1.src = "./Images/star-icon.png";
+    rate2.src = "./Images/star-icon.png";
+    rate3.src = "./Images/star-icon.png";
+    rate4.src = "./Images/star-icon.png";
+    rate5.src = "./Images/star-icon.png";
+  });
+};
+
+// Yandex market function
 let getMore = (arr) => {
   let doc = document;
   let wrap = document.querySelector(arr[0][0]);
@@ -239,6 +266,8 @@ let getMore = (arr) => {
       let btn_content = doc.createTextNode("В корзину");
       btn.append(btn_content);
       thing.append(btn);
+
+      starRater(star1, star2, star3, star4, star5)
     }
   }
 
@@ -260,41 +289,17 @@ let getMore = (arr) => {
       prevEl: ".swiper-button-prev",
     },
   });
-
-  // Rating stars
-  let rate1 = document.querySelectorAll(".rating-1");
-  let rate2 = document.querySelectorAll(".rating-2");
-  let rate3 = document.querySelectorAll(".rating-3");
-  let rate4 = document.querySelectorAll(".rating-4");
-  let rate5 = document.querySelectorAll(".rating-5");
-
-  for (let item of rate1) {
-    item.addEventListener("click", function () {
-      alert("Вы поставили 1 звезду этому товару ⭐");
-    });
-  }
-  for (let item of rate2) {
-    item.addEventListener("click", function () {
-      alert("Вы поставили 2 звезды этому товару ⭐⭐");
-    });
-  }
-  for (let item of rate3) {
-    item.addEventListener("click", function () {
-      alert("Вы поставили 3 звезды этому товару ⭐⭐⭐");
-    });
-  }
-  for (let item of rate4) {
-    item.addEventListener("click", function () {
-      alert("Вы поставили 4 звезды этому товару ⭐⭐⭐⭐");
-    });
-  }
-  for (let item of rate5) {
-    item.addEventListener("click", function () {
-      alert("Вы поставили 5 звёзд этому товару ⭐⭐⭐⭐⭐");
-    });
-  }
 };
 
+// Rating stars for HTML made block
+let starr1 = document.querySelector('.rating-1')
+let starr2 = document.querySelector('.rating-2')
+let starr3 = document.querySelector('.rating-3')
+let starr4 = document.querySelector('.rating-4')
+let starr5 = document.querySelector('.rating-5')
+starRater(starr1, starr2, starr3, starr4, starr5)
+
+// Function yandex market start on button click
 let show_btn = document.querySelector(".show-more");
 show_btn.addEventListener("click", function () {
   setTimeout(() => {
@@ -302,3 +307,8 @@ show_btn.addEventListener("click", function () {
     getMore(things);
   }, 300);
 });
+
+// Star rater helper
+setTimeout(() => {
+  alert("Вы можете ставить оценку товарам!")
+}, 10000);
