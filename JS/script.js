@@ -22,6 +22,7 @@ let things = [
   ],
   {
     name: "iPhone 14",
+    id: Math.floor(Math.random() * 1000000),
     price: "84 600 ₽",
     discount: "-10%",
     dPrice: "76 150 ₽",
@@ -33,6 +34,7 @@ let things = [
   },
   {
     name: "Smart Kolonka",
+    id: Math.floor(Math.random() * 1000000),
     price: "7 490 ₽",
     discount: "-5%",
     dPrice: "6 990 ₽",
@@ -44,6 +46,7 @@ let things = [
   },
   {
     name: "Joy for ps4",
+    id: Math.floor(Math.random() * 1000000),
     price: "5 490 ₽",
     discount: "-73%",
     dPrice: "1 472 ₽",
@@ -55,6 +58,7 @@ let things = [
   },
   {
     name: "Smart Watch",
+    id: Math.floor(Math.random() * 1000000),
     price: "6 800 ₽",
     discount: "-60%",
     dPrice: "2 748 ₽",
@@ -66,6 +70,7 @@ let things = [
   },
   {
     name: "Nothing Phone",
+    id: Math.floor(Math.random() * 1000000),
     price: "43 670 ₽",
     discount: "-6%",
     dPrice: "40 924 ₽",
@@ -76,6 +81,7 @@ let things = [
   },
   {
     name: "AirPods",
+    id: Math.floor(Math.random() * 1000000),
     price: "20 000 ₽",
     discount: "-1₽",
     dPrice: "19 999 ₽",
@@ -86,6 +92,7 @@ let things = [
   },
   {
     name: "Microsoft Keyboard",
+    id: Math.floor(Math.random() * 1000000),
     price: "9 050 ₽",
     discount: "-17%",
     dPrice: "7 539 ₽",
@@ -97,6 +104,7 @@ let things = [
   },
   {
     name: "Samsung S22 Ultra",
+    id: Math.floor(Math.random() * 1000000),
     price: "114 990 ₽",
     discount: "-17%",
     dPrice: "95 990 ₽",
@@ -107,6 +115,7 @@ let things = [
   },
   {
     name: "Macbook Pro",
+    id: Math.floor(Math.random() * 1000000),
     price: "73 339 ₽",
     discount: "-0%",
     dPrice: "73 339 ₽",
@@ -118,6 +127,7 @@ let things = [
   },
   {
     name: "Playstation 5",
+    id: Math.floor(Math.random() * 1000000),
     price: "58 399 ₽",
     discount: "-0%",
     dPrice: "58 399 ₽",
@@ -128,6 +138,7 @@ let things = [
       "Игровая приставка Sony PlayStation 5 Digital Edition 825 ГБ SSD, белый",
   },
 ];
+console.log(things);
 
 // Rating stars function
 let starRater = (rater1, rater2, rater3, rater4, rater5) => {
