@@ -14,43 +14,48 @@
     <title>Яндекс Маркет</title>
   </head>
   <body>
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="item">
-            <span>
-              <img src="./Images/image-1.webp" class="main-img" title="iPhone 14" />
-              <div class="price-zone">
-                <p class="d-price">76 150 ₽</p>
-                <p class="price">84 600 ₽</p>
-                <p class="discount">-10%</p>
-              </div>
-              <div class="star-zone">
-                <div class="stars">
-                  <img src="./Images/star-icon.png" class="rating-1"/>
-                  <img src="./Images/star-icon.png" class="rating-2"/>
-                  <img src="./Images/star-icon.png" class="rating-3"/>
-                  <img src="./Images/star-icon.png" class="rating-4"/>
-                  <img src="./Images/star-icon.png" class="rating-5"/>
-                </div>
-                <p class="star-number">288</p>
-              </div>
-              <p class="context">
-                Apple Телефон Apple iPhone 14 256Gb (PRODUCT)BLUE Global Синий,
-                256 ГБ
-              </p>
-            </span>
-            <button class="btn">В корзину</button>
+    <header>
+      <div class="cathegory-wrapper">
+        <div class="cath-all white-bg"><p>Все</p></div>
+        <div class="cath-1 black-bg"><p>Смартфоны</p></div>
+        <div class="cath-2 black-bg"><p>Умные часы</p></div>
+        <div class="cath-3 black-bg"><p>Наушники</p></div>
+        <div class="cath-4 black-bg"><p>Аудиотехника</p></div>
+        <div class="cath-5 black-bg"><p>Ноутбуки (+аксессуары)</p></div>
+      </div>
+      <a href="./basket.html" class="basket">
+        <img src="./Images/basket-icon.png" alt="Корзина" title="Корзина" />
+      </a>
+    </header>
+    <div class="modal hide">
+      <div class="modal-content">
+        <h2 class="modal-title">Товар успешно добавлен в корзину</h2>
+        <div class="modal-info">
+          <div class="main-info">
+            <img src="./Images/image-1.webp" />
+            <p class="modal-context">
+              Apple Телефон Apple iPhone 14 256Gb (PRODUCT)BLUE Global Синий,
+              256 ГБ
+            </p>
           </div>
+          <div class="modal-counter">
+            <p class="minus">-</p>
+            <p class="count-num" contenteditable="true">1</p>
+            <p class="plus">+</p>
+          </div>
+          <p class="modal-price">76 150 ₽</p>
+        </div>
+        <div class="btn-wrapper">
+          <button class="btn-1">Продолжить покупки</button>
+          <button class="btn-2">Перейти в корзину</button>
+          <button class="btn-3">Купить сейчас</button>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
-    <button class="show-more">Show more</button>
+    <main>
+      <div class="wrapper"></div>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./JS/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>
