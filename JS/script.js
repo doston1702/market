@@ -560,7 +560,6 @@ let getMore = (arr, catheg) => {
 
   let modal = document.querySelector(".modal");
   let modal_btn = document.querySelector(".btn-1");
-  let modal_btn2 = document.querySelector(".btn-2")
   let modal_context = document.querySelector(".modal-context");
   let modal_img = document.querySelector(".main-info").firstElementChild;
   let modal_price = document.querySelector(".modal-price");
@@ -660,11 +659,11 @@ let getMore = (arr, catheg) => {
         modal.classList.remove("hide");
         modal_img.src = item.img;
         modal_context.innerHTML = item.context;
-        setInterval(() => {
-          modal_price.innerHTML =
-            +item.dPrice.replace(/₽/gi, "").replace(/ /gi, "") *
-              +modal_num.innerHTML +
-            "₽";
+        let int = setInterval(() => {
+          modal_price.innerHTML = +item.dPrice.replace(/₽/gi, "").replace(/ /gi, "") * +modal_num.innerHTML + "₽";
+          modal_btn.onclick = ()=>{
+            clearInterval(int)
+          }
         }, 100);
       });
 
@@ -676,11 +675,8 @@ let getMore = (arr, catheg) => {
     }
   }
   modal_btn.addEventListener("click", function () {
-    modal.classList.add("hide");
+      modal.classList.add("hide");
   });
-  modal_btn2.addEventListener("click", function(){
-    window.open("./basket.html")
-  })
 };
 let getDelete = () => {
   let slides = document.querySelectorAll(".slide");
@@ -876,3 +872,46 @@ for (let item of document.querySelector(".modal").classList) {
     itemCounter();
   }
 }
+
+// Поисковая система
+let doc = document
+let wrap = doc.querySelector('.wrappper')
+let search_div = doc.querySelector('.search')
+let inp = search_div.firstElementChild
+let icon = search_div.lastElementChild
+let searchSistem = ()=>{
+  // Стили
+  search_div.style.width = 30 + "px"
+  inp.style.width = 0 + "px"
+  inp.style.paddingLeft = 0 + "px"
+  icon.addEventListener('click', function(){
+    search_div.style.width = 200 + "px"
+    inp.style.width = 170 + "px"
+    inp.style.paddingLeft = 10 + "px"
+  })
+  inp.onblur = ()=>{
+    if (inp.value == "") {
+      search_div.style.width = 30 + "px"
+      inp.style.width = 0 + "px"
+      inp.style.paddingLeft = 0 + "px"
+    }
+  }
+
+  // Логика
+  let changeFunc = ()=>{
+    let items = doc.querySelectorAll('.slide')
+    for (let item of items) {
+      console.log();
+      if (inp.value != "") {
+        if (item.firstElementChild.firstElementChild.lastElementChild.innerHTML.toLocaleLowerCase().includes(inp.value.toLocaleLowerCase())) {
+          item.classList.remove('hide')
+        } else if (item.firstElementChild.firstElementChild.firstElementChild.title.toLocaleLowerCase().includes(inp.value.toLocaleLowerCase())) {
+          item.classList.remove('hide')
+        } else item.classList.add('hide')
+      } else item.classList.remove('hide')
+    }
+  }
+  icon.addEventListener('click', changeFunc)
+  inp.addEventListener('keydown', changeFunc)
+}
+searchSistem()

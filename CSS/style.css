@@ -44,20 +44,38 @@ header {
   font-weight: 500;
   font-size: 16px;
 }
-.basket {
+.search {
+  margin-top: 10px;
+  width: 200px;
+  height: 30px;
+  border-radius: 300px;
+  border: 2px solid white;
   display: flex;
-  justify-content: center;
   align-items: center;
+  overflow: hidden;
+  transition: 300ms;
 }
-.basket img {
-  width: 40px;
-  height: 40px;
-  filter: invert(100%);
+.search input {
+  width: 170px;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  padding-left: 10px;
+  color: white;
+  font-size: 16px;
+  transition: 300ms;
+}
+.search svg {
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+  fill: white;
   cursor: pointer;
   transition: 300ms;
 }
-.basket img:hover {
-  filter: invert(50%);
+.search svg:hover {
+  background-color: black;
+  fill: #ffc400;
 }
 
 /* Wrapper */
