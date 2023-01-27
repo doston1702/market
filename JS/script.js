@@ -901,7 +901,6 @@ let searchSistem = ()=>{
   let changeFunc = ()=>{
     let items = doc.querySelectorAll('.slide')
     for (let item of items) {
-      console.log();
       if (inp.value != "") {
         if (item.firstElementChild.firstElementChild.lastElementChild.innerHTML.toLocaleLowerCase().includes(inp.value.toLocaleLowerCase())) {
           item.classList.remove('hide')
@@ -912,6 +911,6 @@ let searchSistem = ()=>{
     }
   }
   icon.addEventListener('click', changeFunc)
-  inp.addEventListener('keydown', changeFunc)
+  inp.addEventListener('keyup', changeFunc)
 }
 searchSistem()
